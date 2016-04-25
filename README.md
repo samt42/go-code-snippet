@@ -2,7 +2,7 @@
 Code fragment required for Go project
 
 # introduction
-- basic //基础语法
+- basic ////基础语法
   - array //数组
   - goroutine // 协程
   - interface // 接口
