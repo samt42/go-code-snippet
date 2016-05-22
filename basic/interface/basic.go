@@ -1,9 +1,10 @@
-package main 
+package main
 
 import (
-  "fmt"
+	"fmt"
 )
 
 func main() {
-  fmt.Println("Hello world!")
+	var v1 interface{} = 1
+	fmt.Println("type:", v1.(type))
 }

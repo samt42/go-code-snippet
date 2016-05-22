@@ -13,4 +13,8 @@ func main() {
 	fmt.Println(b, " len:", len(b), " cap:", cap(b))
 	b = []int{99, 100, 101, 102}
 	fmt.Println(b, " len:", len(b), " cap:", cap(b))
+	var c = []string{"Hello", "World"}
+	for i, v := range c {
+		fmt.Printf("%d %s\n", i, v)
+	}
 }
