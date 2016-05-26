@@ -48,23 +48,21 @@ func main(){
         post()
 }
 func post(){
-         url := "http://sms.lianjia.com/lianjia/sms/send"
-         //urls := "http://sms.lianjia.com/lianjia/sms/status"
+         url := "********************"
          fileContent := read("./total_res.txt")
-         //fmt.Println(fileContent)
          //b64 := base64.NewEncoding("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/")
          //sendContent := b64.EncodeToString([]byte(fileContent))
          sms := SMSModel{
          	Version: "1.0",
          	Method: "mail.sent",
-         	Group: "huawupingtai",
-         	Auth: "NVuNvwENkqct3XMMQc6K2soEDcfOV6Nb",
-         	Template: "hwpttemp",
+         	Group: "",
+         	Auth: "",
+         	Template: "",
          	Params: SMSParams {
          		To: []string {"lhy_hitwh.com"},
-         		Subject:"Nebula 统计",
-    			Nick: "noreply",
-    			Sendtype : "统计",
+         		Subject:"test",
+    			Nick: "test",
+    			Sendtype : "test",
     			Body : fileContent,
     			//Attachment : []string {"Test Attachment"},
          		//Attachbody: SMSAttachbody {
@@ -72,12 +70,6 @@ func post(){
          		//},
          	},
          }
-         /*sms := SMSModel1{
-         	Version: "1.0",
-         	Method: "mail.staus",
-         	Auth: "NVuNvwENkqct3XMMQc6K2soEDcfOV6Nb",
-         	Params: "3341180990",
-         }*/
          b, err := json.Marshal(sms)
 	     if err != nil {
 		    fmt.Println("error:", err)
