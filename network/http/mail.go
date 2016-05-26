@@ -71,22 +71,22 @@ func post(){
          	},
          }
          b, err := json.Marshal(sms)
-	     if err != nil {
-		    fmt.Println("error:", err)
-	     }
-	     fmt.Println(string(b))
-	     body := bytes.NewBuffer([]byte(b))
-	     resp, err := http.Post(url, "application/json;charset=utf-8", body)
+	 if err != nil {
+		fmt.Println("error:", err)
+	 }
+	 fmt.Println(string(b))
+	 body := bytes.NewBuffer([]byte(b))
+	 resp, err := http.Post(url, "application/json;charset=utf-8", body)
 
          if err != nil {
-			fmt.Println(err.Error())
-			return
-		 }
-		 result, err := ioutil.ReadAll(resp.Body)
-		 defer resp.Body.Close()
-		 fmt.Printf("%s", result)
-		 fmt.Println("post send success")
- }
+		fmt.Println(err.Error())
+		return
+	 }
+	 result, err := ioutil.ReadAll(resp.Body)
+	 defer resp.Body.Close()
+	 fmt.Printf("%s", result)
+	 fmt.Println("post send success")
+}
 
 func read(path string) string{
         f, err := os.Open(path)
