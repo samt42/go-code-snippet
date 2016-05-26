@@ -54,7 +54,7 @@ func post(){
          //sendContent := b64.EncodeToString([]byte(fileContent))
          sms := SMSModel{
          	Version: "1.0",
-         	Method: "mail.sent",
+         	Method: "***",
          	Group: "",
          	Auth: "",
          	Template: "",
