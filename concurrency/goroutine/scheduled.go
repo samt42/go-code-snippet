@@ -1,9 +1,5 @@
 package main
 
-/*
-	一个简单的goroutine的例子比较直观的说明其作用
-
-*/
 import (
 	"fmt"
 	"runtime"
