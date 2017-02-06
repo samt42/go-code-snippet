@@ -21,14 +21,14 @@ type Drama struct{}
 
 func (*Drama) Play() {}
 
-func (*Drama) PlaySound() {}
+//func (*Drama) PlaySound() {}
 
 func main() {
 	var v Video
 	v = new(Movie)
 	v.Play()
 
-	var m MusicVideo
+	var m Video
 	m = new(Drama)
 	m.Play()
 	m.PlaySound()
