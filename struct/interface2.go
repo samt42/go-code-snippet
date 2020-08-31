@@ -20,15 +20,14 @@ type MusicVideo interface {
 type Drama struct{}
 
 func (*Drama) Play() {}
-
-//func (*Drama) PlaySound() {}
+func (*Drama) PlaySound() {}
 
 func main() {
 	var v Video
 	v = new(Movie)
 	v.Play()
 
-	var m Video
+	var m Drama
 	m = new(Drama)
 	m.Play()
 	m.PlaySound()
